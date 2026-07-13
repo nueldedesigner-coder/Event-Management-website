@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — Ayo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">Ayo<span class="logo-dot">.</span></a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html#discover">Discover</a>
+      <a href="index.html#categories">Categories</a>
+      <a href="index.html#organizers">For Organizers</a>
+    </nav>
+    <div class="header-actions">
+      <a href="login.html" class="btn btn-ghost">Log in</a>
+      <a href="signup.html" class="btn btn-primary">Get Started</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="section-inner breadcrumb">
+    <a href="index.html">Discover</a> <span>/</span> <a href="event-details.html">Campus Beats Live Fest</a> <span>/</span> <span class="current">Checkout</span>
+  </div>
+
+  <!-- ===== CHECKOUT STEPS ===== -->
+  <div class="section-inner checkout-steps" aria-hidden="true">
+    <div class="step active"><span>1</span> Tickets</div>
+    <div class="step-line"></div>
+    <div class="step active"><span>2</span> Details</div>
+    <div class="step-line"></div>
+    <div class="step"><span>3</span> Confirmation</div>
+  </div>
+
+  <section class="section-inner checkout-content">
+    <div class="checkout-main">
+
+      <div class="content-block">
+        <h2>Attendee details</h2>
+        <p class="form-hint">This information will be used for your ticket and entry check-in.</p>
+
+        <form id="checkoutForm" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="fullName">Full name</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" placeholder="080X XXX XXXX" required>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="checkoutEmail">Email</label>
+            <input type="email" id="checkoutEmail" name="checkoutEmail" placeholder="you@campus.edu" required>
+            <span class="field-hint">Your ticket and receipt will be sent here</span>
+          </div>
+
+          <h2 class="section-subhead">Payment method</h2>
+          <div class="payment-options">
+            <label class="payment-option">
+              <input type="radio" name="payment" value="card" checked>
+              <span>Card</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment" value="transfer">
+              <span>Bank Transfer</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment" value="ussd">
+              <span>USSD</span>
+            </label>
+          </div>
+
+          <label class="checkbox-row">
+            <input type="checkbox" id="checkoutTerms" required>
+            <span>I agree to the event terms and Ayo's refund policy</span>
+          </label>
+
+          <button type="submit" class="btn btn-primary btn-block" id="placeOrderBtn">Place Order</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- ===== ORDER SUMMARY ===== -->
+    <aside class="ticket-picker">
+      <div class="ticket-picker-card">
+        <h3>Order summary</h3>
+
+        <div class="summary-event">
+          <div class="summary-event-media grad-1"></div>
+          <div>
+            <strong>Campus Beats Live Fest</strong>
+            <span>Sat, Aug 22, 2026 · Main Amphitheatre</span>
+          </div>
+        </div>
+
+        <div class="summary-line">
+          <span>Regular &times; 1</span>
+          <span>₦3,500</span>
+        </div>
+        <div class="summary-line">
+          <span>Service fee</span>
+          <span>₦150</span>
+        </div>
+
+        <div class="ticket-perf"></div>
+
+        <div class="ticket-total-row">
+          <span>Total</span>
+          <strong id="checkoutTotal">₦3,650</strong>
+        </div>
+
+        <p class="ticket-note">You'll get a confirmation email after payment</p>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="section-inner footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">Ayo<span class="logo-dot">.</span></a>
+      <p>Campus events, one tap away.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="index.html#discover">Discover</a>
+      <a href="index.html#categories">Categories</a>
+    </div>
+    <div class="footer-col">
+      <h4>Organizers</h4>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="create-event.html">Create Event</a>
+    </div>
+    <div class="footer-col">
+      <h4>Account</h4>
+      <a href="login.html">Log in</a>
+      <a href="signup.html">Sign up</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Ayo. Built for Case Study 9 — Event Management System.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Confirmed — Ayo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">Ayo<span class="logo-dot">.</span></a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html#discover">Discover</a>
+      <a href="index.html#categories">Categories</a>
+      <a href="index.html#organizers">For Organizers</a>
+    </nav>
+    <div class="header-actions">
+      <a href="login.html" class="btn btn-ghost">Log in</a>
+      <a href="signup.html" class="btn btn-primary">Get Started</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ===== CHECKOUT STEPS ===== -->
+  <div class="section-inner checkout-steps" aria-hidden="true">
+    <div class="step active"><span>1</span> Tickets</div>
+    <div class="step-line"></div>
+    <div class="step active"><span>2</span> Details</div>
+    <div class="step-line"></div>
+    <div class="step active"><span>3</span> Confirmation</div>
+  </div>
+
+  <section class="section-inner confirmation-wrap">
+    <div class="confirmation-head">
+      <div class="confirmation-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h1>You're all set!</h1>
+      <p>Your ticket has been booked. A confirmation and this ticket have also been sent to your email.</p>
+    </div>
+
+    <!-- ===== DIGITAL TICKET ===== -->
+    <div class="digital-ticket">
+      <div class="digital-ticket-top">
+        <div class="digital-ticket-header">
+          <span>Admit One</span>
+          <span class="dt-status">Confirmed</span>
+        </div>
+        <h2>Campus Beats Live Fest</h2>
+        <div class="dt-details">
+          <div>
+            <span class="dt-label">Date &amp; Time</span>
+            <strong>Sat, Aug 22, 2026 · 6:00 PM</strong>
+          </div>
+          <div>
+            <span class="dt-label">Venue</span>
+            <strong>Main Amphitheatre</strong>
+          </div>
+          <div>
+            <span class="dt-label">Ticket Type</span>
+            <strong>Regular · 1 Ticket</strong>
+          </div>
+          <div>
+            <span class="dt-label">Attendee</span>
+            <strong id="attendeeName">Guest</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="dt-perf"></div>
+
+      <div class="digital-ticket-bottom">
+        <div class="dt-qr" aria-hidden="true">
+          <svg viewBox="0 0 100 100" width="76" height="76">
+            <rect width="100" height="100" fill="#F5F3FF" rx="8"/>
+            <g fill="#14102B">
+              <rect x="10" y="10" width="20" height="20"/><rect x="40" y="10" width="10" height="10"/><rect x="70" y="10" width="20" height="20"/>
+              <rect x="10" y="40" width="10" height="10"/><rect x="30" y="40" width="10" height="10"/><rect x="50" y="40" width="20" height="10"/><rect x="80" y="40" width="10" height="20"/>
+              <rect x="10" y="70" width="20" height="20"/><rect x="40" y="60" width="10" height="30"/><rect x="60" y="70" width="10" height="10"/>
+            </g>
+          </svg>
+        </div>
+        <div class="dt-code">
+          <span class="dt-label">Ticket Code</span>
+          <strong id="ticketCode">AYO-4F82-KX09</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="confirmation-actions">
+      <button class="btn btn-outline" id="downloadBtn">Download Ticket</button>
+      <a href="my-tickets.html" class="btn btn-primary">View My Tickets</a>
+    </div>
+
+    <a href="index.html" class="back-home-link">&larr; Back to homepage</a>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="section-inner footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">Ayo<span class="logo-dot">.</span></a>
+      <p>Campus events, one tap away.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="index.html#discover">Discover</a>
+      <a href="index.html#categories">Categories</a>
+    </div>
+    <div class="footer-col">
+      <h4>Organizers</h4>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="create-event.html">Create Event</a>
+    </div>
+    <div class="footer-col">
+      <h4>Account</h4>
+      <a href="login.html">Log in</a>
+      <a href="signup.html">Sign up</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Ayo. Built for Case Study 9 — Event Management System.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/confirmation.js"></script>
+</body>
+</html>
